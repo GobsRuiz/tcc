@@ -1,0 +1,152 @@
+/* Definindo o tema roxo */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100vh;
+    padding-top: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 20px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+h2, h3 {
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.section {
+    margin-bottom: 30px;
+}
+
+ul {
+    
+    list-style-type: none;
+    padding-left: 0;
+}
+
+li {
+    
+    margin-bottom: 8px;
+    font-size: 16px;
+}
+
+label {
+    
+    font-weight: bold;
+    margin-top: 10px;
+    display: block;
+}
+
+input[type="text"], input[type="date"], select {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+input[type="text"]:focus, input[type="date"]:focus, select:focus {
+    border-color: #8A2BE2;
+    box-shadow: 0 0 5px rgba(138, 43, 226, 0.5);
+    outline: none;
+}
+
+input[type="email"] {
+    width: 50%;
+    width: 50%;
+    padding: 8px;
+    margin: 5px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+input[type="email"]:focus {
+    border-color: #8A2BE2;  /* Cor da borda em foco (azul) */
+    box-shadow: 0 0 5px rgba(138, 43, 226, 0.5);
+    outline: none;
+    background-color: #fff;  /* Fundo branco no foco */
+}
+
+input[type="email"]::placeholder {
+    color: #888;  /* Cor do texto do placeholder */
+    opacity: 0.7;
+}
+
+.radio-group {
+    margin-top: 10px;
+}
+
+.radio-group label {
+    margin-right: 15px;
+}
+
+.warning {
+    font-size: 14px;
+    color: #ff0000;
+    margin-top: 5px;
+}
+
+.exame-clinico {
+    margin-top: 30px;
+    padding-top: 15px;
+    border-top: 2px solid #8A2BE2;
+}
+
+.form-buttons {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.btn-editar, .btn-finalizar {
+    background-color: #8A2BE2;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.btn-editar:hover, .btn-finalizar:hover {
+    background-color: #7a1ae0;
+}
+/* Estilo para o botão Voltar */
+.btn-voltar {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-color: #8A2BE2; /* Cor roxa */
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 25px; /* Borda arredondada */
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-voltar:hover {
+    background-color: #7a1ae0; /* Cor roxa mais escura no hover */
+}

@@ -1,0 +1,136 @@
+/* Estilos para a tela de acompanhamento de pacientes */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4; /* Cor de fundo */
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 90%;
+  margin: 20px auto; /* Margem centralizada */
+}
+
+.botao-voltar {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 18px;
+  color: #fff;
+  background-color: #8A2BE2;
+  padding: 10px 20px;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.botao-voltar:hover {
+  background-color: #7a2ac5;
+}
+
+h1 {
+  text-align: center; /* Alinha o título ao centro */
+  margin-bottom: 20px; /* Espaço abaixo do título */
+}
+
+.barra-pesquisa input {
+  width: 100%; /* Preenche toda a largura */
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px; /* Bordas arredondadas */
+  margin-bottom: 20px; /* Espaço abaixo da barra de pesquisa */
+}
+
+.conteudo {
+  display: flex; /* Organiza as seções lado a lado */
+  gap: 20px; /* Espaço entre as seções */
+}
+
+.secao-lista {
+  flex: 2; /* Seção maior para a lista de pacientes */
+}
+
+.paciente {
+  background-color: #fff; /* Fundo branco para os itens da lista */
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.informacoes-paciente p {
+  margin: 5px 0; /* Espaço entre as informações */
+}
+
+.acoes-paciente button {
+  margin-left: 5px; /* Espaço entre os botões */
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px; /* Bordas arredondadas */
+  cursor: pointer;
+}
+
+.botao-ver {
+  background-color: #8502cc; /* Cor para o botão de ver */
+  color: white;
+}
+
+.botao-excluir {
+  background-color: #dc3545; /* Cor para o botão de excluir */
+  color: white;
+}
+
+.acoes-paciente button:hover {
+  opacity: 0.9; /* Efeito de hover nos botões */
+}
+
+.barra-status {
+  padding: 5px;
+  border-radius: 5px;
+  font-size: 12px; /* Tamanho de fonte pequeno */
+  text-align: center;
+  width: 100px; /* Largura fixa para a barra de status */
+}
+
+.status-verde {
+  background-color: #28a745; /* Cor para status "Em dia" */
+  color: white;
+}
+
+.status-vermelha {
+  background-color: #dc3545; /* Cor para status "Exame pendente" */
+  color: white;
+}
+
+.status-amarelo {
+  background-color: #ffc107; /* Cor para status "Agendado" */
+  color: black;
+}
+
+.secao-filtro {
+  flex: 1; /* Seção menor para filtros */
+  background-color: #fff; /* Fundo branco */
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.secao-filtro h3 {
+  margin-top: 0; /* Retira o espaço acima do título */
+}
+
+.secao-filtro ul {
+  list-style: none; /* Remove os marcadores de lista */
+  padding: 0;
+}
+
+.secao-filtro li {
+  margin-bottom: 10px; /* Espaço entre os itens de filtro */
+}
+
+.secao-filtro input {
+  margin-right: 5px; /* Espaço à direita do checkbox */
+}

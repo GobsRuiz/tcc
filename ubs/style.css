@@ -1,0 +1,136 @@
+/* Reset básico para garantir consistência */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f1f1f1;
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center;     /* Centraliza verticalmente */
+    min-height: 100vh;       /* Garante que o corpo ocupe toda a altura da viewport */
+    padding-top: 20px;
+}
+
+.container {
+    width: 100%;  /* Agora ocupa toda a largura disponível */
+    padding: 20px; /* Adiciona algum preenchimento */
+    display: flex;
+    justify-content: center; /* Centraliza o conteúdo dentro do container */
+}
+
+.formulario {
+    background-color: #ffffff; /* Cor de fundo */
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    
+}
+
+h1 {
+    margin-bottom: 10px;
+    text-align: center;
+    color: #333;
+}
+
+h2 {
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: 300;
+    color: #6d6d6d;
+}
+
+.form-row {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #555;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="tel"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    font-family: Arial, sans-serif; /* Garantir que o texto tenha a mesma fonte dos inputs */
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="tel"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+    border-color: #8A2BE2;
+    outline: none;
+    box-shadow: 0 0 5px rgba(138, 43, 226, 0.7);
+}
+
+textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+.form-group {
+    margin-bottom: 15px; /* Adiciona um pouco de espaçamento entre os campos */
+}
+
+textarea {
+    margin-top: 4px; /* Adiciona espaço entre o campo de endereço e o campo acima */
+}
+
+button[type="submit"] {
+    background-color: #8A2BE2;
+    color: #fff;
+    border: none;
+    padding: 15px;
+    border-radius: 56px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+    margin-top: 20px; /* Adiciona espaço acima do botão */
+}
+
+button[type="submit"]:hover {
+    background-color: #7a2bbd;
+}
+
+/* Estilo do botão de voltar no canto superior esquerdo */
+.back-btn {
+    position: absolute;
+    top: 20px;
+    left: 20px; /* Altera 'right' para 'left' para posicionar no canto esquerdo */
+    background-color: #8A2BE2;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px; /* Bordas arredondadas */
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.back-btn:hover {
+    background-color: #7a2bbd;
+}
+
+/* Responsividade */
+@media (max-width: 580px) {
+    .formulario {
+        padding: 20px; /* Menos padding em telas pequenas */
+    }
+
+    .container {
+        padding: 0 15px; /* Adiciona padding lateral no container */
+    }
+}

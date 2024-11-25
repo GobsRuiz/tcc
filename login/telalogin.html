@@ -1,0 +1,50 @@
+<!DOCTYPE html> 
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <!-- Link para o arquivo CSS -->
+    <link rel="stylesheet" href="tela.css">
+</head>
+<body>
+
+    <!-- Plugin de acessibilidade VLibras -->
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+          <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+    
+    <!-- Script para carregar o VLibras -->
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+
+    <!-- Contêiner principal do formulário de login -->
+    <div class="login-container">
+        <!-- Título da página de login -->
+        <h1>Login</h1>
+        
+        <!-- Formulário para login, enviado para logar.php -->
+        <form action="logar.php" method="post">
+            <!-- Grupo de entrada para o nome de usuário -->
+            <div class="input-group">
+                <label for="username">Usuário</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            
+            <!-- Grupo de entrada para a senha -->
+            <div class="input-group">
+                <label for="password">Senha</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            
+            <!-- Botão de envio do formulário -->
+            <button type="submit">Entrar</button>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,173 @@
+/* Reset básico para garantir consistência */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilo geral do corpo da página */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  padding: 20px;
+  margin: 0;
+}
+
+/* Container principal */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+/* Centraliza o título da página */
+h1 {
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Botão de Voltar */
+.botao-voltar {
+  font-size: 18px;
+  color: #fff;
+  background-color: #8A2BE2;
+  padding: 10px 20px;
+  border-radius: 50px;
+  border: none;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  position: absolute; /* Posicionado no canto superior esquerdo */
+  top: 20px;
+  left: 20px;
+}
+
+.botao-voltar:hover {
+  background-color: #7a2ac5; /* Cor mais escura no hover */
+}
+
+/* Barra de pesquisa para buscar pacientes */
+.barra-pesquisa {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+}
+
+.barra-pesquisa input {
+  width: 100%;
+  max-width: 400px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+/* Layout de conteúdo principal */
+.conteudo {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+  width: 100%;
+}
+
+/* Seção de lista de pacientes */
+.secao-lista {
+  flex: 2;
+  min-width: 300px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  max-height: calc(100vh - 180px);
+  overflow-y: auto; /* Permite rolar a lista */
+}
+
+.item-lista {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 15px;
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.item-lista p {
+  margin: 0;
+}
+
+.botao-ver {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.botao-ver:hover {
+  background-color: #218838;
+}
+
+/* Seção de filtros por UBS */
+.secao-filtros {
+  flex: 1;
+  min-width: 250px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.secao-filtros h3 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.secao-filtros ul {
+  list-style: none;
+  padding: 0;
+}
+
+.secao-filtros li {
+  margin-bottom: 15px;
+}
+
+.secao-filtros input {
+  margin-right: 10px;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+  .conteudo {
+    flex-direction: column;
+  }
+
+  .barra-pesquisa input {
+    width: 100%;
+  }
+
+  .secao-lista, .secao-filtros {
+    flex: 1;
+    min-width: 100%;
+  }
+}

@@ -1,0 +1,67 @@
+/* Estilos gerais */
+body {
+    font-family: 'Arial', sans-serif;
+}
+
+.container {
+    max-width: 100%;
+}
+
+/* Estilo do slider */
+.slider {
+    width: 80%;             /* Largura do slider (você pode ajustar a porcentagem) */
+    margin: 0 auto;         /* Centraliza o slider na página */
+    padding-top: 80px;      /* Adiciona um pouco de espaço no topo, se necessário */
+}
+
+/* Estilo de cada slide */
+.slide {
+    height: 300px;          /* Altura fixa para os slides */
+    display: flex;
+    justify-content: center; /* Centraliza o conteúdo dentro de cada slide */
+    align-items: center;     /* Centraliza o conteúdo dentro de cada slide */
+}
+
+/* Ajuste para as imagens dentro dos slides */
+.slide img {
+    width: 100%;            /* Faz com que a imagem ocupe 100% da largura do slide */
+    height: 100%;           /* A altura das imagens será a altura do slide */
+    object-fit: cover;      /* Garante que a imagem cubra o slide sem distorcer */
+}
+
+/* Estilo das setas de navegação */
+.slick-prev:before,
+.slick-next:before {
+    color: black !important; /* Cor das setas */
+    font-size: 30px;         /* Tamanho das setas */
+    opacity: 1 !important;   /* Garantir que as setas sejam visíveis */
+}
+
+.slick-prev {
+    z-index: 9999;
+    left: 10px !important;  /* Posição da seta anterior */
+}
+
+.slick-next {
+    right: 10px !important; /* Posição da seta seguinte */
+}
+
+/* Ajuste da barra de navegação */
+.slick-dots {
+    bottom: -30px; /* Move os pontos de navegação para baixo */
+}
+/* Estilos específicos */
+.fw-light {
+    font-weight: lighter;
+}
+.text-center {
+    padding: 50px;
+    text-align: center;
+}
+.fs-4 {
+    font-family: 'Arial', sans-serif;
+    font-size: 1rem;
+    
+
+}
+

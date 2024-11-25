@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Metas de Exames</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
+  <link rel="stylesheet" href="metas.css">
+</head>
+<body>
+  <!-- Conteúdo da página -->
+
+<div vw class="enabled">
+  <div vw-access-button class="active"></div>
+  <div vw-plugin-wrapper>
+    <div class="vw-plugin-top-wrapper"></div>
+  </div>
+</div>
+<script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+<script>
+  new window.VLibras.Widget('https://vlibras.gov.br/app');
+</script>
+</body> <!-- Fim do corpo da página -->
+
+  <div class="container">
+    <!-- Botão de Voltar -->
+    <button class="botao-voltar" onclick="window.location.href='./../index.php';">Voltar</button>
+    
+    <h1>Metas de Exames</h1>
+    
+    <div class="grafico-container">
+      <canvas id="graficoPizza"></canvas>
+    </div>
+    
+    <p class="info-meta">A UBS tem a meta de 4.000 exames no ano.</p>
+  </div>
+
+  <script>
+    // Dados para o gráfico de pizza
+    const data = {
+      labels: ['Exames em Dia', 'Encaminhados para Barretos', 'Não Compareceram', 'Faltam Realizar'],
+      datasets: [{
+        data: [1200, 800, 500, 1500],
+        backgroundColor: ['#34a853', '#4285f4', '#ea4335', '#f1c40f'],
+        borderColor: '#fff',
+        borderWidth: 2,
+      }]
+    };
+
+    const config = {
+      type: 'pie',
+      data: data,
+      options: {
+        responsive: true,
+        plugins: {
+          legend: {
+            position: 'top',
+            labels: {
+              font: {
+                size: 16,
+                weight: 'bold'
+              },
+              color: '#333'
+            }
+          },
+          tooltip: {
+            callbacks: {
+              label: function(tooltipItem) {
+                return tooltipItem.label + ': ' + tooltipItem.raw + ' pacientes';
+              }
+            }
+          },
+          datalabels: {
+            color: '#fff',
+            font: {
+              weight: 'bold',
+              size: 14
+            },
+            formatter: function(value, ctx) {
+              return value + ' pacientes';
+            },
+            anchor: 'end',
+            align: 'start',
+          }
+        }
+      },
+    };
+
+    // Renderizando o gráfico
+    const ctx = document.getElementById('graficoPizza').getContext('2d');
+    new Chart(ctx, config);
+  </script>
+</body>
+</html>
