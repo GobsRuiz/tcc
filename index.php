@@ -26,7 +26,9 @@
 
 <?php
     include_once("autenticar.php");
+    $isAdm = $_SESSION['adm'];
 ?>
+
     <div class="container">
       <br><br> <center> <h1>SISTEMA DE GESTÃO</h1> </center>
        <br><br>
@@ -62,15 +64,19 @@
                                     <li><a class="dropdown-item" href="#">Imprimir</a></li>
                                 </ul>
                             </li>
-                            <li class="nav-item dropdown fs-5">
-                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                🔐 Acesso
-                                </a>
-                                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                    <li><a class="dropdown-item" href="ubs/form.php">Nova UBS</a></li>
-                                    <li><a class="dropdown-item" href="usuario/usuario.php">Novo usuário</a></li>
-                                </ul>
-                            </li>
+
+                            <?php if($isAdm) : ?>
+                                <li class="nav-item dropdown fs-5">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    🔐 Acesso
+                                    </a>
+                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                        <li><a class="dropdown-item" href="ubs/form.php">Nova UBS</a></li>
+                                        <li><a class="dropdown-item" href="usuario/usuario.php">Novo usuário</a></li>
+                                    </ul>
+                                </li>
+                            <?php endif; ?>
+
                             <li class="nav-item dropdown fs-5">
                                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                     Olá, <?php echo  $_SESSION['User_login'];  ?>
