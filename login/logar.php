@@ -12,6 +12,7 @@ if (mysqli_num_rows($sql)==1)
     $_SESSION['Ubs_id'] = $resultado['ubs_id'];
     $_SESSION['User_login'] = $resultado['user_login'];
     $_SESSION['User_id'] = $resultado['user_id'];
+    $_SESSION['adm'] = $resultado['adm'];
     
    header("location:../index.php");
 } 
