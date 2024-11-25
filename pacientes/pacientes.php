@@ -1,4 +1,6 @@
 <?php
+session_start();
+
 // Configuração do banco de dados
 $host = "127.0.0.1";
 $user = "root";
@@ -20,7 +22,8 @@ if (isset($_GET['search'])) {
 }
 
 // Consulta SQL com filtro
-$sql = "SELECT pac_id, pac_nome FROM pacientes WHERE pac_nome LIKE ?";
+$ubsId = $_SESSION['Ubs_id'];
+$sql = "SELECT pac_id, pac_nome FROM pacientes WHERE ubs_id = $ubsId and pac_nome LIKE ?";
 $stmt = $conn->prepare($sql);
 $searchTermWithWildcard = "%$searchTerm%";
 $stmt->bind_param("s", $searchTermWithWildcard);
