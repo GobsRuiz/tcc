@@ -19,6 +19,9 @@
             }
         };
     </script>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
 </head>
 <body>
 <body> <!-- Inicio do corpo da página -->
@@ -51,15 +54,25 @@
 
                 <div class="form-group">
                     <label for="cpf">CPF</label>
-                    <input type="text" id="cpf" name="cpf" class="form-control" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" placeholder="XXX.XXX.XXX-XX" required>
+                    <input type="text" id="cpf" name="cpf" class="form-control" placeholder="XXX.XXX.XXX-XX" required>
                 </div>
+                <script>
+                    $(document).ready(function() {
+                        $('#cpf').mask('000.000.000-00');
+                    });
+                </script>
             </div>
 
             <div class="form-row">
                 <div class="form-group">
                     <label for="sus">SUS</label>
-                    <input type="text" id="sus" name="sus" class="form-control" placeholder="Digite o número do SUS">
+                    <input type="text" id="sus" name="sus" class="form-control" placeholder="000 0000 0000 0000">
                 </div>
+                <script>
+                    $(document).ready(function() {
+                        $('#sus').mask('000 0000 0000 0000');
+                    });
+                </script>
 
                 <div class="form-group">
                     <label for="datanasc">Data de Nascimento</label>
@@ -70,20 +83,35 @@
             <div class="form-row">
                 <div class="form-group">
                     <label for="celular">Celular</label>
-                    <input type="tel" id="celular" name="celular" class="form-control" placeholder="(99) 99999-9999" pattern="\(\d{2}\) \d{5}-\d{4}" required>
+                    <input type="tel" id="celular" name="celular" class="form-control" placeholder="(00) 00000-0000" required>
                 </div>
+                <script>
+                    $(document).ready(function() {
+                        $('#celular').mask('(00) 00000-0000');
+                    });
+                </script>
 
                 <div class="form-group">
                     <label for="telefone2">Telefone</label>
-                    <input type="tel" id="telefone2" name="telefone2" class="form-control" placeholder="(99) 9999-9999" pattern="\(\d{2}\) \d{4}-\d{4}">
+                    <input type="tel" id="telefone2" name="telefone2" class="form-control" placeholder="(00) 0000-0000" pattern="\(\d{2}\) \d{4}-\d{4}">
                 </div>
+                <script>
+                    $(document).ready(function() {
+                        $('#telefone2').mask('(00) 0000-0000');
+                    });
+                </script>
             </div>
 
             <div class="form-row">
                 <div class="form-group">
                     <label for="tel_recados">Telefone para recado</label>
-                    <input type="text" id="tel_recados" name="tel_recados" class="form-control" placeholder="(99) 9999-9999" pattern="\(\d{2}\) \d{4}-\d{4}">
+                    <input type="text" id="tel_recados" name="tel_recados" class="form-control" placeholder="(00) 0000-0000" pattern="\(\d{2}\) \d{4}-\d{4}">
                 </div>
+                <script>
+                    $(document).ready(function() {
+                        $('#tel_recados').mask('(00) 0000-0000');
+                    });
+                </script>
 
                 <div class="form-group">
                     <label for="email">E-mail</label>

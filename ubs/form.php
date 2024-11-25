@@ -30,21 +30,21 @@
             <div class="form-row">
                 <div class="form-group">
                     <label for="nome">Nome da UBS</label>
-                    <input type="text" id="nome" name="nome" class="form-control" placeholder="Digite o nome da ubs"
-                        required>
+                    <input type="text" id="nome" name="nome" class="form-control" placeholder="Digite o nome da ubs" required>
                 </div>  
             </div>
 
             <div class="form-row">
                 <div class="form-group">
                     <label for="telefone">Telefone da Unidade</label>
-                    <input type="tel" id="telefone" name="telefone" class="form-control" placeholder="(99) 99999-9999" required>
+                    <input type="tel" id="telefone" name="telefone" class="form-control" placeholder="(00) 0000-0000" required>
                 </div>
         
             <div class="form-row">
-                 <div class="form-group">
+                <div class="form-group">
                     <label for="endereco">Endereço da unidade</label>
                     <textarea id="endereco" name="endereco" class="form-control" placeholder="Digite o endereço"></textarea>
+                </div>
             </div>
 
             <button type="submit" class="btn-finalizar">Finalizar Cadastro</button>
