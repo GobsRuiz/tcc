@@ -176,7 +176,8 @@ CREATE TABLE `usuario` (
   `user_id` int(11) NOT NULL,
   `ubs_id` int(11) DEFAULT NULL,
   `user_login` varchar(30) NOT NULL,
-  `user_senha` varchar(30) NOT NULL
+  `user_senha` varchar(30) NOT NULL,
+  `adm` boolean DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
